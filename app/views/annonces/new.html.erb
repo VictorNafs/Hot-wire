@@ -1,0 +1,13 @@
+<%= turbo_frame_tag "_form" do %>
+
+<h1>New annonce</h1>
+
+<%= render "form", annonce: @annonce %>
+
+<br>
+
+<div>
+  <%= link_to "Back to annonces", annonces_path %>
+</div>
+
+<% end %>

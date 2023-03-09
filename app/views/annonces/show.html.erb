@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @annonce %>
+
+<div>
+<% if current_user && @annonce.user == current_user %>
+  <%= link_to "Edit this annonce", edit_annonce_path(@annonce) %>
+<% end %> |
+  <%= link_to "Back to annonces", annonces_path %>
+
+  <%= button_to "Destroy this annonce", @annonce, method: :delete %>
+</div>
